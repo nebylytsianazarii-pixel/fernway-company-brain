@@ -1,12 +1,14 @@
 name: Claude action debug (temporary)
 on:
-  push:
-    branches: [debug/claude-action]
+  pull_request:
+    branches: [main]
 jobs:
   debug:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pull-requests: write
+      issues: write
       id-token: write
     steps:
       - uses: actions/checkout@v4
