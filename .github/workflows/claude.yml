@@ -38,5 +38,6 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          show_full_output: true  # temporary: @claude fails after 1 s with no error text
           claude_args: |
             --max-turns 15
