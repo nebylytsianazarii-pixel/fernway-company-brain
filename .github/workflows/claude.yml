@@ -39,6 +39,5 @@ jobs:
         with:
           # Runs on the maintainer's Claude subscription (token from `claude setup-token`), not on API credits.
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          show_full_output: true  # temporary, until the first successful run
           claude_args: |
             --max-turns 15

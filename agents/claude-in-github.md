@@ -25,7 +25,7 @@ sources: .github/workflows/claude.yml, CONTRIBUTING.md
 
 1. It loads `CLAUDE.md`, so it answers only from the brain, cites files, and says "Not in the brain yet" instead of guessing.
 2. It may open branches and pull requests. It never merges: `main` is protected and the doc owner reviews.
-3. Only people with write access can trigger it, so outsiders cannot spend the API budget.
+3. Only people with write access can trigger it, so outsiders cannot use up the maintainer's subscription.
 
 ## Cost
 
