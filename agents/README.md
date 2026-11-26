@@ -9,5 +9,6 @@ To register one, copy `templates/agent.md`.
 | Claude support drafts | Drafts replies to support tickets | Yes, if ticket text is pasted in | GAP: not named | Trial, no rules yet | [claude-support-drafts.md](claude-support-drafts.md) |
 | Ivan's n8n workflows | Six or seven internal workflows | Unknown | Ivan Petrenko | Undocumented | [n8n-workflows.md](n8n-workflows.md) |
 | @claude in this repo | Answers questions and drafts pull requests in GitHub issues | No, by repo rule | Hana Kim (maintainer) | Live | [claude-in-github.md](claude-in-github.md) |
+| Stale doc check | Opens a monthly issue listing docs past their review date, gaps and disputes | No | Hana Kim (maintainer) | Live | [stale-doc-check.md](stale-doc-check.md) |
 
 The first two existed before this brain. Automations the brain itself adds are registered here too.

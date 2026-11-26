@@ -1,0 +1,24 @@
+name: Stale doc check
+
+on:
+  schedule:
+    - cron: "0 7 1 * *"   # 07:00 UTC on the first day of every month
+  workflow_dispatch:        # run it by hand from the Actions tab
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the review list
+        run: python3 scripts/check_stale.py > report.md
+      - name: Open the monthly review issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create brain-review --color FBCA04 --description "Monthly brain review" 2>/dev/null || true
+          gh issue create --title "Brain review $(date +%Y-%m)" --body-file report.md --label brain-review
