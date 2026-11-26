@@ -37,10 +37,8 @@ jobs:
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          show_full_output: true  # temporary: @claude fails after 1 s with no error text
+          # Runs on the maintainer's Claude subscription (token from `claude setup-token`), not on API credits.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          show_full_output: true  # temporary, until the first successful run
           claude_args: |
             --max-turns 15
-            --model claude-haiku-5-5
-          settings: |
-            {"env": {"CLAUDE_CODE_MAX_OUTPUT_TOKENS": "4000"}}
