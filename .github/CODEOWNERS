@@ -1,0 +1,8 @@
+# Who reviews pull requests for which folder. See CONTRIBUTING.md "Who can change what".
+# Fernway's people have no GitHub accounts in this training copy, so the maintainer account
+# stands in for all of them. Real mapping, to switch on when the team joins:
+#   /customers/inbound-leads.md   Priya Raman      /customers/onboarding.md   Lukas Weber
+#   /customers/support*           Jonas Berg       /customers/billing.md      Hana Kim
+#   /customers/pricing*           Mara Voss        /engineering/              Ivan Petrenko
+#   /agents/n8n-workflows.md      Ivan Petrenko    /decisions/                Mara Voss
+*   @nebylytsianazarii-pixel
