@@ -16,7 +16,7 @@ sources: .github/workflows/claude.yml, CONTRIBUTING.md
 | What it reads | This repo, including `CLAUDE.md` |
 | What it writes or changes | Issue and pull request comments; new branches with proposed changes |
 | Customer data involved | No. The repo holds none by rule, and nobody may paste any into an issue. |
-| Secrets it uses | `ANTHROPIC_API_KEY`, stored as a GitHub Actions secret. Value never in a file. |
+| Secrets it uses | `CLAUDE_CODE_OAUTH_TOKEN` (the maintainer's Claude subscription token from `claude setup-token`), stored as a GitHub Actions secret. Value never in a file. |
 | Owner | Hana Kim (maintainer) |
 | If it breaks | No reply in the issue; check the Actions tab for the failed run |
 | How to switch it off | Settings, Actions, disable the "Claude Code" workflow, or delete `.github/workflows/claude.yml` |
@@ -29,4 +29,4 @@ sources: .github/workflows/claude.yml, CONTRIBUTING.md
 
 ## Cost
 
-Each run uses the Anthropic API key and costs money. The maintainer checks usage in the monthly review.
+Runs count against the maintainer's Claude subscription usage, not API credits. The token is valid for a year; renewing it is part of the maintainer's job. If the maintainer changes, the new maintainer creates their own token.
