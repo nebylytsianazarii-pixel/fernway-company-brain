@@ -41,3 +41,6 @@ jobs:
           show_full_output: true  # temporary: @claude fails after 1 s with no error text
           claude_args: |
             --max-turns 15
+            --model claude-haiku-5-5
+          settings: |
+            {"env": {"CLAUDE_CODE_MAX_OUTPUT_TOKENS": "4000"}}
